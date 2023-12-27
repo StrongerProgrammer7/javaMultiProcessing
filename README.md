@@ -36,7 +36,9 @@
 
 If you have problem: maybe you don't have user varibale for InteliJ IDEA 
 
-(name: InteliJ IDEA value: path\InteliJIDEA..\bin ; name: IntelliJ IDEA (Community or PRO) .. value: path\InteliJ IDEA..\bin)
+(name: InteliJ IDEA value: path\InteliJIDEA..\bin ; 
+
+name: IntelliJ IDEA (Community or PRO) .. value: path\InteliJ IDEA..\bin)
 
 ### Work in project (description for InteliJ IDEA 2023)
 
@@ -45,8 +47,50 @@ If you have problem: maybe you don't have user varibale for InteliJ IDEA
 - Create your class
 - Edit configuration -> + -> Application ->
   - Set name application
-  - Modify options -> Add VM options -> put -jar ${MPJ_HOME}/lib/starter.jar -np 2
+  - Modify options -> Add VM options -> put -jar ${MPJ_HOME}/lib/starter.jar -np (set count rank)
   - set name main class (if not set)
   - Environment variables: MPJ_HOME=path\MPJ
 
 ## Briefly description tasks
+
+### Introduction with MPJ
+
+Simple introduction with MPJ ( if you run and get succes then you've installed it correctly. )
+
+### Using Async
+
+Simple introduction with MPJ using Async (Isend, Irecv)
+For taks using block and non block
+The overall objective, is as follows:
+1) Each processor puts its rank into the integer variable buf.
+2) Each processor forwards the buf variable to its neighbor on the right.
+3) Each processor sums the received value into a variable s, and then passes the calculated value to its neighbor on the right. 
+4) The ring transfers stop when the zero processor sums up the ranks of all processors.
+
+### Using Probe
+
+A simple example of using Probe in asynchronous operation
+
+### Sort Array
+
+Simple array sorting
+1) 9 processes are used ( I have 2 cores, so 7 virtual threads)
+2) 1-6 processes generate random numbers in the array (i.e. each process has 1 number)
+3) 1-3 send 8 processes with tag 0
+4) the rest of you send 7 processes with tag 1.
+5) 7 and 8 sort and send 0 to the process with tags 0 and 1
+6) 0 sorts the rest
+
+### Mult Vector x Matrix
+
+Algorithm for calculating the product of a matrix over a vector. 
+Consider the presence of a tail.
+1) Execute in blocking variant
+2) Execute in a non-blocking variant
+3) Execute in a collective versio
+
+### Graph - Floyd
+
+Algorithm for computing the diameter of an undirected graph.
+- Graph - for matrix with any values
+- GraphWithSetMatrix - using ready matrix for check work algorithm 
