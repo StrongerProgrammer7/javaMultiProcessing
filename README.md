@@ -3,9 +3,9 @@
 # javaMultiProcessing
 
 ## Content
-- Which develop instruments used
-- How connect MPJ and include in project
-- Briefly description tasks
+- <a href="https://github.com/StrongerProgrammer7/javaMultiProcessing#which-develop-instruments-used">Which develop instruments used </a>
+-  <a href="https://github.com/StrongerProgrammer7/javaMultiProcessing#how-connect-mpj-and-include-in-project">How connect MPJ and include in project</a>
+- <a href="https://github.com/StrongerProgrammer7/javaMultiProcessing#work-in-project-description-for-intelij-idea-2023">Briefly description tasks</a>
   - Introduction with MPJ
   - Using Async
   - Using Probe
